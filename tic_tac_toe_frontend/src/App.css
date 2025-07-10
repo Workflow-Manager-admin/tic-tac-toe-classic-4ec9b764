@@ -92,9 +92,33 @@
     transform: rotate(360deg);
   }
 }
+/* Tic-Tac-Toe Board Styles */
+.ttt-board {
+  user-select: none;
+}
+
+/* Tic-Tac-Toe Square Styles */
+.ttt-square {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+}
 
 /* Responsive design for mobile */
 @media (max-width: 768px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 48px) !important;
+    grid-template-rows: repeat(3, 48px) !important;
+    gap: 9px !important;
+  }
+  .ttt-square {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.45rem !important;
+    border-radius: 8px !important;
+  }
   .theme-toggle {
     top: 10px;
     right: 10px;
